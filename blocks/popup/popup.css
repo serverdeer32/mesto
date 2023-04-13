@@ -1,0 +1,28 @@
+@keyframes popupOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup {
+  padding: 195px 19px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  animation: popupOpen .2s linear;
+
+}
+
+@media screen and (max-width: 880px) {
+  .popup {
+    padding: 123px 19px;
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/pages/index.css" rel="stylesheet">
+  <title>Проект: Место</title>
+</head>
+<body class="page">
+
+  <header class="header">
+    <img src="/images/logo.svg" class="header__logo" alt="Логотип проекта">
+  </header>
+
+  <main class="content">
+
+    <section class="profile">
+      <img src="/images/ava.png" alt="Аватар пользователя" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__user">
+          <h2 class="profile__name">Жак-Ив Кусто</h2>
+          <button class="profile__button-edit" type="button" title="Редактировать профиль"></button>
+        </div>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
+      <button class="profile__button-add" type="button" title="Добавить"></button>
+    </section>
+
+    <section class="gallery">
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <img src="/images/karachaevsk.jpeg" class="gallery__photo" alt="Карачаевск">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Карачаевск</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+
+        <li class="gallery__item">
+          <img src="/images/elbrus.jpeg" class="gallery__photo" alt="Эльбрус">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Гора Эльбрус</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+
+        <li class="gallery__item">
+          <img src="/images/dombai2.jpeg" class="gallery__photo" alt="Домбай">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Домбай</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+
+        <li class="gallery__item">
+          <img src="/images/elbrus2.jpeg" class="gallery__photo" alt="Эльбрус">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Гора Эльбрус</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+
+        <li class="gallery__item">
+          <img src="/images/dombai.jpeg" class="gallery__photo" alt="Домбай">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Домбай</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+
+        <li class="gallery__item">
+          <img src="/images/karachaevck-cherkessia.avif" class="gallery__photo" alt="Карачаево-Черкесия">
+          <div class="gallery__info">
+            <h2 class="gallery__title">Карачаево-Черкесия</h2>
+            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">© 2023 Mesto Russia</p>
+  </footer>
+
+  <div class="popup">
+    <div class="popup__edit-form">
+      <button class="popup__button-close" title="Закрыть"></button>
+      <p class="popup__title">Редактировать профиль</p>
+      <form class="popup__form">
+        <fieldset class="popup__fieldset">
+          <input class="popup__input popup__name-input" type="text" maxlength="25" />
+          <input class="popup__input popup__description-input" type="text" maxlength="250" />
+          <button type="submit" class="popup__button">Сохранить</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
