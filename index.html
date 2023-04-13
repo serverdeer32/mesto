@@ -19,12 +19,12 @@
       <img src="./images/ava.png" alt="Аватар пользователя" class="profile__avatar">
       <div class="profile__info">
         <div class="profile__user">
-          <h2 class="profile__name">Жак-Ив Кусто</h2>
-          <button class="profile__button-edit" type="button" title="Редактировать профиль"></button>
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__button-edit" type="button" title="Редактировать профиль" aria-label="Редактировать профиль"></button>
         </div>
         <p class="profile__description">Исследователь океана</p>
       </div>
-      <button class="profile__button-add" type="button" title="Добавить"></button>
+      <button class="profile__button-add" type="button" title="Добавить" aria-label="Добавить"></button>
     </section>
 
     <section class="gallery">
@@ -33,7 +33,7 @@
           <img src="./images/karachaevsk.jpeg" class="gallery__photo" alt="Карачаевск">
           <div class="gallery__info">
             <h2 class="gallery__title">Карачаевск</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
 
@@ -41,7 +41,7 @@
           <img src="./images/elbrus.jpeg" class="gallery__photo" alt="Эльбрус">
           <div class="gallery__info">
             <h2 class="gallery__title">Гора Эльбрус</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
 
@@ -49,7 +49,7 @@
           <img src="./images/dombai2.jpeg" class="gallery__photo" alt="Домбай">
           <div class="gallery__info">
             <h2 class="gallery__title">Домбай</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
 
@@ -57,7 +57,7 @@
           <img src="./images/elbrus2.jpeg" class="gallery__photo" alt="Эльбрус">
           <div class="gallery__info">
             <h2 class="gallery__title">Гора Эльбрус</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
 
@@ -65,15 +65,15 @@
           <img src="./images/dombai.jpeg" class="gallery__photo" alt="Домбай">
           <div class="gallery__info">
             <h2 class="gallery__title">Домбай</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
 
         <li class="gallery__item">
-          <img src="./images/karachaevck-cherkessia.avif" class="gallery__photo" alt="Карачаево-Черкесия">
+          <img src="./images/karachaevck-cherkessia.jpeg" class="gallery__photo" alt="Карачаево-Черкесия">
           <div class="gallery__info">
             <h2 class="gallery__title">Карачаево-Черкесия</h2>
-            <button class="gallery__button-like" type="button" title="Лайк!"></button>
+            <button class="gallery__button-like" type="button" title="Лайк!" aria-label="Лайк!"></button>
           </div>
         </li>
       </ul>
@@ -87,14 +87,14 @@
 
   <div class="popup">
     <div class="popup__edit-form">
-      <button class="popup__button-close" title="Закрыть"></button>
+      <button class="popup__button-close" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
       <p class="popup__title">Редактировать профиль</p>
-      <form class="popup__form">
+      <form class="popup__form" name="edit_form">
         <fieldset class="popup__fieldset">
-          <input class="popup__input popup__name-input" type="text" maxlength="25">
-          <input class="popup__input popup__description-input" type="text" maxlength="250">
-          <button type="submit" class="popup__button">Сохранить</button>
+          <input class="popup__input" name="popup__name-input" placeholder="Имя" type="text">
+          <input class="popup__input" name="popup__description-input" placeholder="О себе" type="text">
         </fieldset>
+        <button type="submit" class="popup__button">Сохранить</button>
       </form>
     </div>
   </div>

@@ -9,8 +9,15 @@
   padding: 0;
 }
 
+@media screen and (min-width: 880px) and (max-width: 1023px) {
+  .gallery__list {
+    padding: 0 26px;
+  }
+}
+
 @media screen and (max-width: 880px) {
   .gallery__list {
     margin: 36px auto 0;
+    padding: 0 26px;
   }
 }
