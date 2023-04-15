@@ -6,8 +6,8 @@ let formElement = document.querySelector('.popup__form');
 
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
-let inputName = document.querySelector('input[name="popup__name-input"]')
-let inputDescription = document.querySelector('input[name="popup__description-input"]');
+let inputName = document.getElementById('popup__name-input')
+let inputDescription = document.getElementById('popup__description-input');
 
 
 function openPopup() {
