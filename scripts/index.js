@@ -1,20 +1,20 @@
 // Попап редакьирования профиля
 const editButton = document.querySelector('.profile__button-edit');
-const popupProfileCloseButton = document.querySelector('.popup_profle_close_button');
-const formElement = document.querySelector('.popup_edit-form');
+const popupProfileCloseButton = document.querySelector('.popup__button-close-profile');
+const formElement = document.querySelector('.popup__form-edit');
 const popupProfile = document.querySelector('.popup_profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const inputName = document.querySelector('.popup_name-input')
-const inputDescription = document.querySelector('.popup_description-input');
+const inputName = document.querySelector('.popup__input_name')
+const inputDescription = document.querySelector('.popup__input_description');
 
 // Попап добавления карточки
 const addCardButton = document.querySelector('.profile__button-add');
-const popupCardCloseButton = document.querySelector('.popup_card_close_button');
+const popupCardCloseButton = document.querySelector('.popup__button-close_card');
 const popupCardAdd = document.querySelector('.popup_add_card');
-const formCard = popupCardAdd.querySelector('.popup_add_form');
-const inputNameCard = popupCardAdd.querySelector('.popup_card-name');
-const inputLinkCard = popupCardAdd.querySelector('.popup_card-link');
+const formCard = popupCardAdd.querySelector('.popup__form_add');
+const inputNameCard = popupCardAdd.querySelector('.popup__input_card-name');
+const inputLinkCard = popupCardAdd.querySelector('.popup__input_card-link');
 
 // Карточки
 const templateCard = document.querySelector('#gallery__item-template');
@@ -25,7 +25,7 @@ const cardItemList = document.querySelector('.gallery__list');
 const popupPhoto = document.querySelector('.popup_photo');
 const popupPhotoTitle = popupPhoto.querySelector('.popup__photo-title');
 const popupPhotoSource = popupPhoto.querySelector('.popup__photo-source');
-const popupPhotoCloseButton = popupPhoto.querySelector('.popup_photo_close_button');
+const popupPhotoCloseButton = popupPhoto.querySelector('.popup__button-close_photo');
 
 // Функция открытия попапа
 const openPopup = function (popup) {

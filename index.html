@@ -41,12 +41,12 @@
 
   <div class="popup popup_profile">
     <div class="popup__edit-form">
-      <button class="popup__button-close popup_profle_close_button" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
+      <button class="popup__button-close popup__button-close-profile" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form popup_edit-form" id="edit-form" name="edit-form" method="POST">
+      <form class="popup__form popup__form-edit" id="edit-form" name="edit-form" method="POST">
         <fieldset class="popup__fieldset">
-          <input class="popup__input popup_name-input" id="popup__name-input" name="popup__name-input" placeholder="Имя" type="text">
-          <input class="popup__input popup_description-input" id="popup__description-input" name="popup__description-input" placeholder="О себе" type="text">
+          <input class="popup__input popup__input_name" id="popup__name-input" name="popup__name-input" placeholder="Имя" type="text">
+          <input class="popup__input popup__input_description" id="popup__description-input" name="popup__description-input" placeholder="О себе" type="text">
         </fieldset>
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
@@ -57,18 +57,18 @@
     <div class="popup__photo">
       <img class="popup__photo-source">
       <h3 class="popup__photo-title"></h3>
-      <button type="button" class="popup__button-close popup_photo_close_button"></button>
+      <button type="button" class="popup__button-close popup__button-close_photo"></button>
     </div>
   </div>
 
   <div class="popup popup_add_card">
     <div class="popup__edit-form">
-      <button class="popup__button-close popup_card_close_button" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
+      <button class="popup__button-close popup__button-close_card" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form popup_add_form" id="add_form" name="add_form" method="POST">
+      <form class="popup__form popup__form_add" id="add_form" name="add_form" method="POST">
         <fieldset class="popup__fieldset">
-          <input class="popup__input popup_card-name" id="popup_card-name" name="popup_card-name" placeholder="Название" type="text">
-          <input class="popup__input popup_card-link" id="popup_card-link" name="popup_card-link" placeholder="Ссылка на картинку" type="text">
+          <input class="popup__input popup__input_card-name" id="popup_card-name" name="popup_card-name" placeholder="Название" type="text">
+          <input class="popup__input popup__input_card-link" id="popup_card-link" name="popup_card-link" placeholder="Ссылка на картинку" type="text">
         </fieldset>
         <button type="submit" class="popup__button">Создать</button>
       </form>
