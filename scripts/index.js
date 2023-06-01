@@ -1,22 +1,20 @@
-const popup = document.querySelectorAll('.popup');
-
 // Попап редакьирования профиля
 const editButton = document.querySelector('.profile__button-edit');
-const popupProfileCloseButton = document.querySelector('#profile-close');
-const formElement = document.querySelector('#edit-form');
-const popupProfile = document.querySelector('#popup-profile');
+const popupProfileCloseButton = document.querySelector('.popup_profle_close_button');
+const formElement = document.querySelector('.popup_edit-form');
+const popupProfile = document.querySelector('.popup_profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const inputName = document.querySelector('#popup__name-input')
-const inputDescription = document.querySelector('#popup__description-input');
+const inputName = document.querySelector('.popup_name-input')
+const inputDescription = document.querySelector('.popup_description-input');
 
 // Попап добавления карточки
 const addCardButton = document.querySelector('.profile__button-add');
-const popupCardCloseButton = document.querySelector('#card-close');
-const popupCardAdd = document.querySelector('#popup-add');
-const formCard = popupCardAdd.querySelector('#add_form');
-const inputNameCard = popupCardAdd.querySelector('#popup_card-name');
-const inputLinkCard = popupCardAdd.querySelector('#popup_card-link');
+const popupCardCloseButton = document.querySelector('.popup_card_close_button');
+const popupCardAdd = document.querySelector('.popup_add_card');
+const formCard = popupCardAdd.querySelector('.popup_add_form');
+const inputNameCard = popupCardAdd.querySelector('.popup_card-name');
+const inputLinkCard = popupCardAdd.querySelector('.popup_card-link');
 
 // Карточки
 const templateCard = document.querySelector('#gallery__item-template');
@@ -24,37 +22,10 @@ const cardItem = templateCard.content.querySelector('.gallery__item');
 const cardItemList = document.querySelector('.gallery__list');
 
 // Попап с фото
-const popupPhoto = document.querySelector('#popup-photo');
+const popupPhoto = document.querySelector('.popup_photo');
 const popupPhotoTitle = popupPhoto.querySelector('.popup__photo-title');
 const popupPhotoSource = popupPhoto.querySelector('.popup__photo-source');
-const popupPhotoCloseButton = popupPhoto.querySelector('#photo-close');
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
+const popupPhotoCloseButton = popupPhoto.querySelector('.popup_photo_close_button');
 
 // Функция открытия попапа
 const openPopup = function (popup) {
