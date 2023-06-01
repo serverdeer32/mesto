@@ -11,6 +11,6 @@
   opacity: 0.5;
 }
 
-.gallery__button-like:active {
+.gallery__button-like_active {
   background: url(../../../images/like_active.png);
 }
