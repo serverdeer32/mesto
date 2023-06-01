@@ -98,7 +98,7 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
-  closePopup();
+  closePopup(popupProfile);
 }
 //Обработчик формы редактирования профиля
 formElement.addEventListener('submit', handleFormSubmit);
@@ -109,30 +109,33 @@ function createCard(item) {
   const titleCard = newCard.querySelector('.gallery__title');
   const likeButton = newCard.querySelector('.gallery__button-like');
   const deleteButton = newCard.querySelector('.gallery__button-delete')
+  const imageCard = newCard.querySelector('.gallery__photo');
 
   titleCard.textContent = item.name;
-
-  const imageCard = newCard.querySelector('.gallery__photo');
   imageCard.src  = item.link;
   imageCard.alt = item.name;
 
   //Кнопка лайка карточки
-  likeButton.addEventListener ('click', function(event) {
+  const handleLikeCard = function() {
     likeButton.classList.toggle('gallery__button-like_active');
-  });
+  };
 
-  //Кнопка удаления карточки
-  deleteButton.addEventListener('click', function(event) {
+  // Удаление карточки
+  const handleDeleteCard = function() {
     newCard.remove();
-  });
+  };
 
   //Открытие попапа с фото
-  imageCard.addEventListener('click', function () {
+  const handleOpenPhoto = function () {
     openPopup(popupPhoto);
     popupPhotoSource.src = imageCard.src;
     popupPhotoTitle.textContent = item.name;
     popupPhotoSource.alt = item.name;
-  });
+  };
+
+  likeButton.addEventListener ('click', handleLikeCard);
+  deleteButton.addEventListener ('click', handleDeleteCard);
+  imageCard.addEventListener('click', handleOpenPhoto);
 
   return newCard;
 };
@@ -144,14 +147,15 @@ initialCards.forEach(function(item) {
 });
 
 // Добавление новой карточки
-formCard.addEventListener('submit', function(event) {
+function handleAddCard (evt) {
   event.preventDefault();
   const name = inputNameCard.value;
   const link = inputLinkCard.value;
 
   cardItemList.prepend(createCard({name, link}));
-  event.target.reset();
+  evt.target.reset();
 
   closePopup(popupCardAdd);
-});
+}
 
+formCard.addEventListener('submit', handleAddCard);
