@@ -44,11 +44,11 @@
       <button class="popup__button-close popup__button-close-profile" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form novalidate class="popup__form popup__form-edit" id="edit-form" name="edit-form" method="POST">
-          <label class="popup__input_label">
+          <label class="popup__input-label">
             <input required minlength="2" maxlength="40" class="popup__input popup__input_name" id="name" name="popup__name-input" placeholder="Имя" type="text">
             <span id="name-error" class="popup__error"></span>
           </label>
-          <label class="popup__input_label">
+          <label class="popup__input-label">
             <input required minlength="2" maxlength="200" class="popup__input popup__input_description" id="description" name="popup__description-input" placeholder="О себе" type="text">
             <span id="description-error" class="popup__error"></span>
           </label>
@@ -70,11 +70,11 @@
       <button class="popup__button-close popup__button-close_card" title="Закрыть окно" type="button" aria-label="Закрыть окно"></button>
       <h2 class="popup__title">Новое место</h2>
       <form novalidate class="popup__form popup__form_add" id="add-form" name="add-form" method="POST">
-        <label class="popup__input_label">
+        <label class="popup__input-label">
           <input required minlength="2" maxlength="30" class="popup__input popup__input_card-name" id="card-name" name="popup_card-name" placeholder="Название" type="text">
           <span id="card-name-error" class="popup__error"></span>
         </label>
-        <label class="popup__input_label">
+        <label class="popup__input-label">
           <input required type="url" class="popup__input popup__input_card-link" id="card-link" name="popup_card-link" placeholder="Ссылка на картинку">
           <span id="card-link-error" class="popup__error"></span>
         </label>
