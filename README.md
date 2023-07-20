@@ -13,5 +13,6 @@
 5. GRID Layout
 6. Адаптивный дизайн
 7. JavaScript
+8. Валидация форм с помощью JavaScript
 
 [Проект на GitHub Pages](https://serverdeer32.github.io/mesto/)
