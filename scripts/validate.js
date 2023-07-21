@@ -2,7 +2,6 @@ const validationElements = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__error_visible'
 }
@@ -14,8 +13,8 @@ const setEventListeners = (formElement) => {
 
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
-      toggleButtonState(inputList, buttonElement);
       isValid(formElement, inputElement);
+      toggleButtonState(inputList, buttonElement);
     });
   });
 };
