@@ -68,6 +68,7 @@ function handleProfileFormSubmit(evt) {
   profileName.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
   closePopup(popupProfile);
+  formEditProfile.resetValidation();
 }
 
 function handleAddCard (evt) {
@@ -77,9 +78,10 @@ function handleAddCard (evt) {
   const cardElement = card.generateCard();
 
   galleryList.prepend(cardElement);
+
   closePopup(popupCardAdd);
   formCard.reset();
-
+  formAddCard.resetValidation();
 }
 
 closeButtons.forEach((button) => {
