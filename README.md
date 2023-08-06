@@ -14,5 +14,7 @@
 6. Адаптивный дизайн
 7. JavaScript
 8. Валидация форм с помощью JavaScript
+9. ООП, ES6 Modules
+
 
 [Проект на GitHub Pages](https://serverdeer32.github.io/mesto/)

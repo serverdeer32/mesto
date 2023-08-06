@@ -1,35 +1,8 @@
-export const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
+import { initialCards } from "./constants.js";
 
 export class Card {
   constructor(cardData, templateSelector, openImagePopup) {
     this._cardData = cardData;
-    this._name = cardData.name;
-    this._image = cardData.link;
     this._templateSelector = templateSelector;
     this._openImagePopup = openImagePopup;
   }
@@ -76,9 +49,9 @@ export class Card {
     this._imageCard = this._element.querySelector('.gallery__photo');
     this._deleteButton = this._element.querySelector('.gallery__button-delete');
 
-    this._imageCard.src = this._image;
-    this._imageCard.alt = this._name;
-    this._title.textContent = this._name;
+    this._imageCard.src = this._cardData.link;
+    this._imageCard.alt = this._cardData.name;
+    this._title.textContent = this._cardData.name;
 
     this._setEventListeners();
     return this._element;

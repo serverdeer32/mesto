@@ -1,18 +1,12 @@
-export const validationElements = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible'
-}
+import { config } from "./constants.js";
 
 export class FormValidator {
-  constructor(validationElements, form) {
-    this._inputSelector = validationElements.inputSelector;
-    this._submitButtonSelector = validationElements.submitButtonSelector;
+  constructor(config, form) {
+    this._inputSelector = config.inputSelector;
+    this._submitButtonSelector = config.submitButtonSelector;
     this._form = form;
-    this._inputErrorClass = validationElements.inputErrorClass;
-    this._errorClass = validationElements.errorClass;
+    this._inputErrorClass = config.inputErrorClass;
+    this._errorClass = config.errorClass;
   }
 
   _showInputError(errorTextElement, input) {
@@ -56,7 +50,7 @@ export class FormValidator {
   }
 
   _hasInvalidInput() {
-    return Array.from(this._inputList).some((input) => {
+    return this._arrayInputList.some((input) => {
       return !input.validity.valid;
     });
   }
@@ -72,12 +66,12 @@ export class FormValidator {
   enableValidation() {
     this._button = this._form.querySelector(this._submitButtonSelector);
     this._inputList = this._form.querySelectorAll(this._inputSelector);
+    this._arrayInputList = Array.from(this._inputList);
     this._setEventListener();
   }
 
   resetValidation() {
     this._disableButton();
-
 
     this._inputList.forEach((input) => {
       const errorTextElement = this._form.querySelector(`#${input.id}-error`);
@@ -85,3 +79,4 @@ export class FormValidator {
     });
   }
 }
+

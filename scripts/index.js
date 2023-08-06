@@ -1,5 +1,6 @@
-import { Card, initialCards } from "./Card.js"
-import { FormValidator, validationElements } from "./FormValidator.js";
+import { Card } from "./Card.js"
+import { config, initialCards } from "./constants.js";
+import { FormValidator } from "./FormValidator.js";
 
 const popupPhoto = document.querySelector('.popup_photo');
 const popupProfile = document.querySelector('.popup_profile');
@@ -23,10 +24,10 @@ const closeButtons = document.querySelectorAll('.popup__button-close');
 const galleryList = document.querySelector('.gallery__list')
 const templateSelector = '.gallery__item-template';
 
-const formEditProfile = new FormValidator(validationElements, popupProfile);
+const formEditProfile = new FormValidator(config, popupProfile);
 formEditProfile.enableValidation();
 
-const formAddCard = new FormValidator(validationElements, formCard);
+const formAddCard = new FormValidator(config, formCard);
 formAddCard.enableValidation();
 
 const openPopup = function (popup) {
@@ -71,18 +72,24 @@ function handleProfileFormSubmit(evt) {
   formEditProfile.resetValidation();
 }
 
-function handleAddCard (evt) {
-  evt.preventDefault();
-  const cardDataAdd = {name: inputNameCard.value, link: inputLinkCard.value};
-  const card = new Card(cardDataAdd, templateSelector, openImagePopup);
+function createCard(cardData) {
+  const card = new Card(cardData, templateSelector, openImagePopup);
   const cardElement = card.generateCard();
 
   galleryList.prepend(cardElement);
+}
 
+function handleAddCard (evt) {
+  evt.preventDefault();
+  const cardDataAdd = {name: inputNameCard.value, link: inputLinkCard.value};
+
+  createCard(cardDataAdd);
   closePopup(popupCardAdd);
   formCard.reset();
   formAddCard.resetValidation();
 }
+
+
 
 closeButtons.forEach((button) => {
   const popup = button.closest('.popup');
@@ -104,10 +111,7 @@ formCard.addEventListener('submit', handleAddCard);
 
 function init () {
   initialCards.forEach((item) => {
-    const card = new Card(item, templateSelector, openImagePopup);
-    const cardElement = card.generateCard();
-
-    galleryList.prepend(cardElement);
+    createCard(item);
   })
 };
 
