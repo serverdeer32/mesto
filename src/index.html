@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./pages/index.css" rel="stylesheet">
   <title>Проект: Место</title>
 </head>
 <body class="page">
 
   <header class="header">
-    <img src="./images/logo.svg" class="header__logo" alt="Логотип проекта">
+    <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="Логотип проекта">
   </header>
 
   <main class="content">
 
     <section class="profile">
-      <img src="./images/ava.png" alt="Аватар пользователя" class="profile__avatar">
+      <img src="<%=require('./images/ava.png')%>" alt="Аватар пользователя" class="profile__avatar">
       <div class="profile__info">
         <div class="profile__user">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -29,7 +28,7 @@
 
     <section class="gallery">
       <ul class="gallery__list">
-
+        <!-- тут должны быть карточки -->
       </ul>
     </section>
 
@@ -45,11 +44,11 @@
       <h2 class="popup__title">Редактировать профиль</h2>
       <form novalidate class="popup__form popup__form-edit" id="edit-form" name="edit-form" method="POST">
           <label class="popup__input-label">
-            <input required minlength="2" maxlength="40" class="popup__input popup__input_name" id="name" name="popup__name-input" placeholder="Имя" type="text">
+            <input required minlength="2" maxlength="40" class="popup__input popup__input_name" id="name" name="name" placeholder="Имя" type="text">
             <span id="name-error" class="popup__error"></span>
           </label>
           <label class="popup__input-label">
-            <input required minlength="2" maxlength="200" class="popup__input popup__input_description" id="description" name="popup__description-input" placeholder="О себе" type="text">
+            <input required minlength="2" maxlength="200" class="popup__input popup__input_description" name="description" id="description" name="popup__description-input" placeholder="О себе" type="text">
             <span id="description-error" class="popup__error"></span>
           </label>
         <button type="submit" class="popup__button" id="save-profile">Сохранить</button>
@@ -71,11 +70,11 @@
       <h2 class="popup__title">Новое место</h2>
       <form novalidate class="popup__form popup__form_add" id="add-form" name="add-form" method="POST">
         <label class="popup__input-label">
-          <input required minlength="2" maxlength="30" class="popup__input popup__input_card-name" id="card-name" name="popup_card-name" placeholder="Название" type="text">
+          <input required minlength="2" maxlength="30" class="popup__input popup__input_card-name" id="card-name" name="name" placeholder="Название" type="text">
           <span id="card-name-error" class="popup__error"></span>
         </label>
         <label class="popup__input-label">
-          <input required type="url" class="popup__input popup__input_card-link" id="card-link" name="popup_card-link" placeholder="Ссылка на картинку">
+          <input required type="url" class="popup__input popup__input_card-link" id="card-link" name="link" placeholder="Ссылка на картинку">
           <span id="card-link-error" class="popup__error"></span>
         </label>
         <button type="submit" class="popup__button" id="create-card">Создать</button>
@@ -94,7 +93,6 @@
     </li>
   </template>
 
-  <script type="module" src="./scripts/index.js"></script>
 
 </body>
 </html>

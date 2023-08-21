@@ -1,4 +1,4 @@
-import { initialCards } from "./constants.js";
+import { initialCards } from "../utils/constants.js";
 
 export class Card {
   constructor(cardData, templateSelector, openImagePopup) {
@@ -15,7 +15,7 @@ export class Card {
     return newCard;
   }
 
-  _handleOpenPhoto() {
+  _handleOpenPhoto = () => {
     this._openImagePopup(this._cardData);
   }
 

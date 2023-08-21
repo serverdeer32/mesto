@@ -15,6 +15,7 @@
 7. JavaScript
 8. Валидация форм с помощью JavaScript
 9. ООП, ES6 Modules
+10. Webpack
 
 
 [Проект на GitHub Pages](https://serverdeer32.github.io/mesto/)
