@@ -50,8 +50,8 @@ export class Card {
     this._deleteButton = this._element.querySelector('.gallery__button-delete');
 
     this._imageCard.src = this._cardData.link;
-    this._imageCard.alt = this._cardData.title;
-    this._title.textContent = this._cardData.title;
+    this._imageCard.alt = this._cardData.name;
+    this._title.textContent = this._cardData.name;
 
     this._setEventListeners();
     return this._element;
