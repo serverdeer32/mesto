@@ -45,8 +45,9 @@ export const templateSelector = '.gallery__item-template';
 export const popupImageSelector = '.popup_photo';
 export const popupProfileSelector = '.popup_profile';
 export const popupAddCardSelector = '.popup_add_card';
+export const galleryList = '.gallery__list';
 
 export const popupCardAdd = document.querySelector('.popup_add_card');
 export const popupProfile = document.querySelector('.popup_profile');
 export const formCard = popupCardAdd.querySelector('.popup__form_add');
-export const galleryList = document.querySelector('.gallery__list')
+

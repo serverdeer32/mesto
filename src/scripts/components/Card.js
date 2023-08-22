@@ -1,5 +1,3 @@
-import { initialCards } from "../utils/constants.js";
-
 export class Card {
   constructor(cardData, templateSelector, openImagePopup) {
     this._cardData = cardData;
