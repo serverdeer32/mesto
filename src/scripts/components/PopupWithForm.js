@@ -6,13 +6,14 @@ export default class PopupWithForm extends Popup {
     this._submit = submit;
     this._form = this._popup.querySelector('.popup__form');
     this._inputList = this._form.querySelectorAll('.popup__input');
-    this._submitButton = this._popup.querySelector('.popup__button')
+
+    this._submitButton = this._form.querySelector('.popup__button');
+    this._defaultButtonText = this._submitButton.textContent;
   }
 
   close() {
     super.close();
     this._form.reset();
-    this._submitButton.setAttribute('disabled', 'true');
   }
 
   setInputValues(inputValues) {
@@ -25,8 +26,14 @@ export default class PopupWithForm extends Popup {
     super.setEventListeners();
     this._form.addEventListener('submit', evt => {
       evt.preventDefault();
+      this._submitButton.textContent = `${this._defaultButtonText}...`
       this._submit(this._getInputValues());
+      this._submitButton.setAttribute('disabled', true) // Отключение кнопки после отправки для избежания двойного срабатывания даблкликом
     })
+  }
+
+  resetButtonText() {
+    this._submitButton.textContent = this._defaultButtonText;
   }
 
   _getInputValues() {
