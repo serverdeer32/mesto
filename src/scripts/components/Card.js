@@ -12,6 +12,7 @@
     this._setLike = setLike;
     this._likes = cardData.likes;
     this._likesLength = cardData.likes.length;
+    this._isLiked = false;
   }
 
   _getTemplate() {
@@ -31,7 +32,7 @@
   }
 
   _handleLikeCard = () => {
-    this._setLike(this._likeButton, this._cardId);
+    this._setLike(this._isLiked, this._cardId);
   }
 
   _setEventListeners() {
@@ -43,6 +44,7 @@
   _getLikesCount() {
     this._likes.forEach(el => {
       if (el._id === this._myId) {
+        this._isLiked = true;
         this._likeButton.classList.add('gallery__button-like_active');
         return
       }
@@ -53,6 +55,11 @@
   toggleLike(like) {
     this._likeButton.classList.toggle('gallery__button-like_active');
     this._counter.textContent = like.length;
+    if (this._isLiked) {
+      this._isLiked = false;
+    } else {
+      this._isLiked = true;
+    }
   }
 
   removeCard() {
@@ -75,7 +82,7 @@
 
     this._myId === this._ownerId ? this._deleteButton.style.display = 'block' : this._deleteButton.style.display = 'none';
 
-    this. _getLikesCount();
+    this._getLikesCount();
     this._setEventListeners();
     return this._element;
   }

@@ -26,9 +26,8 @@ export default class PopupWithForm extends Popup {
     super.setEventListeners();
     this._form.addEventListener('submit', evt => {
       evt.preventDefault();
-      this._submitButton.textContent = `${this._defaultButtonText}...`
+      this._submitButton.textContent = `Сохранение...`
       this._submit(this._getInputValues());
-      this._submitButton.setAttribute('disabled', true) // Отключение кнопки после отправки для избежания двойного срабатывания даблкликом
     })
   }
 
